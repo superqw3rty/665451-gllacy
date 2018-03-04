@@ -3,10 +3,213 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link type="text/css" rel="stylesheet" href="style/style.css">
   </head>
   <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>
+    <header class="main-header container">
+      <img src="http://placehold.it/150x100" alt="Gllacy Shop" class="logo" width="154" height="64">
+      <nav class="main-nav">
+          <ul class="site-nav">
+              <li class="dropdown"> <a href="catalog.html">Каталог</a>
+                <ul>
+                  <li><a href="catalog.html">Новинки</a></li>
+                  <li><a href="catalog.html">Сливочное</a></li>
+                  <li><a href="catalog.html">Щербеты</a></li>
+                  <li><a href="catalog.html">Фруктовый лёд</a></li>
+                  <li><a href="catalog.html">Мелорин</a></li>
+                </ul>
+              </li>
+              <li><a href="delivery.html">Доставка и оплата</a></li>
+              <li><a href="about.html">О Компания</a></li>
+          </ul>
+          <span class="search">  <!-- Валидатор ругается на форму в спане, в будущем оставлять только форму или делать обёртку div'om?-->
+            <form>
+              <input type="search" name="search" value="Что ищем?" class="dropdown">
+            </form>
+          </span>
+          <ul>
+            <li class="login dropdown">Вход
+                                        <ul>
+                                        <!-- Тут валидатор НЕ ругается, есть второй вариант отдельным блоком, внизу перед </body>-->
+                                          <li>
+                                            <form method="post">
+                                              <input type="text" name="login">
+                                              <input type="password" name="password">
+                                              <input type="submit" name="login" value="Войти">
+                                            </form>
+                                            <p>
+                                              <a href="#">Забыли пароль?</a>
+                                              <a href="#">Новая регистрация</a>
+                                            </p>
+                                          </li>
+                                        </ul>
+            </li>
+            <li class="basket">Пусто</li>
+          </ul>
+      </nav>
+      <p class="worktime">
+        С 10 до 20, ежедневно<br>
+        8 812 450-25-25
+      </p>
+    </header>
 
+    <main class="main container">
+
+      <h1 class="hidden">Мороженое Glaccy Shop</h1>
+
+      <section class="slider">
+        <img src="http://placehold.it/150x100" alt="Крем-брюле и пломбир с малиновым джемом" width="150" height="100">
+        <p class="slider-hook">
+          Крем-брюле и пломбир<br>
+          с малиновым джемом
+        </p>
+        <a href="catalog.html" class="btn order-btn">Дайте оба!</a>
+        <form>
+          <input type="radio" name="slider-radio" value="slider1" checked>
+          <input type="radio" name="slider-radio" value="slider2">
+          <input type="radio" name="slider-radio" value="slider3">
+        </form>
+      </section>
+
+      <article class="get-free">
+        <h2 class="hidden">Добавки Даром</h2>
+        <div class="get-free-item">
+          <h2>Малинка даром!</h2>
+          <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+          <a href="catalog.html" class="btn get-free-btn">Хочу варенье!</a>
+        </div>
+        <div class="get-free-item">
+          <h2>Шоколадки даром!</h2>
+          <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+          <a href="catalog.html" class="btn get-free-btn">Хочу шоколадки!</a>
+        </div>
+      </article>
+
+      <section class="hits">
+        <h2 class="hidden">Хиты продаж</h2>
+        <div class="hit-item">
+          <a href="catalog.html">
+            <img src="http://placehold.it/150x100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="150" height="100">
+          </a>
+          <b>310<span class="rouble"></span>/кг</b>
+          <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+        </div>
+        <div class="hit-item">
+          <a href="catalog.html">
+            <img src="http://placehold.it/150x100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="150" height="100">
+          </a>
+          <b>380<span class="rouble"></span>/кг</b>
+          <p>Сливочно-кофейное с кусочками шоколада</p>
+        </div>
+        <div class="hit-item">
+          <a href="catalog.html">
+            <img src="http://placehold.it/150x100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="150" height="100">
+          </a>
+          <b>355<span class="rouble"></span>/кг</b>
+          <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+        </div>
+        <div class="hit-item">
+          <a href="catalog.html">
+            <img src="http://placehold.it/150x100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="150" height="100">
+          </a>
+          <b>415<span class="rouble"></span>/кг</b>
+          <p>Сливочное крем-брюле с карамельной подливкой</p>
+        </div>
+      </section>
+
+      <section class="features">
+        <h2 class="hidden">Преимущества</h2>
+        <div class="features-item">
+          <span></span>
+          <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+        </div>
+        <div class="features-item">
+          <span></span>
+          <p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+          </p>
+        </div>
+        <div class="features-item">
+          <span></span>
+          <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
+        </div>
+        <div class="featurest-item">
+          <span></span>
+          <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+        </div>
+      </section>
+
+      <article class="blog-item">
+        <a class="blog.html">
+          <img src="http://placehold.it/150x100" alt="Клубничный фон" width="150">
+          <p>Новое в нашем блоге</p>
+          <b>10 способов сервировки фруктовых щербетов к столу</b>
+       </a>
+      </article>
+
+      <section class="subscribe">
+        <img src="http://placehold.it/150x100" alt="фон" width="150">
+        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+        <form method="post">
+          <input type="email" name="email" value="Электронная почта">
+          <input type="submit" name="email" value="Отправить" class="btn subscribe-btn">
+        </form>
+      </section>
+
+      <section class="map">
+        <h2 class="hidden">Как проехать</h2>
+        <img src="http://placehold.it/150x100" alt="фон" width="150">
+        <span class="ice-cream-pict"></span>
+        <section class="contacts">
+          <p>Адрес главного офиса<br> и офлайн-магазина:<br>
+            <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+          </p>
+          <p>
+            Для заказов по телефону:<br>
+            <b>8 812 450-25-25</b><br>
+            (с 10 до 20 ежедневно)
+          </p>
+          <a href="#" class="feedback btn">Форма обратной связи</a>
+        </section>
+      </section>
+    </main>
+
+    <footer class="main-footer container">
+      <section class="social">
+        <ul>
+          <li class="social-btn btn-tw"><a href="twitter.com"></a></li>
+          <li class="social-btn btn-inst"><a href="instagram.com"></a></li>
+          <li class="social-btn btn-fb"><a href="facebook.com"></a></li>
+          <li class="social-btn btn-vk"><a href="vk.com"></a></li>
+        </ul>
+      </section>
+
+      <div class="about-us">
+        <span></span>
+        <a href="contacts.html">Для поставщиков</a>
+        <a href="#">Наши документы</a>
+        <a href="#">О производстве</a>
+        <a href="#">Экологические Стандарты</a>
+      </div>
+
+      <div class="copyright">
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <img  src="http://placehold.it/150x100" alt="htmlacademy.ru" width="150" height="100">
+        </a>
+        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
+       </div>
+    </footer>
+
+<!-- Кнопку "ВОЙТИ" Надо делать ссылкой?
+    <div class="login-form">
+       <form method="post">
+           <input type="text" name="login">
+           <input type="password" name="password">
+           <input type="submit" name="login" value="Войти">
+        </form>
+          <a href="#">Забыли пароль?</a>
+          <a href="#">Новая регистрация</a>
+    </div>
+-->
   </body>
 </html>
