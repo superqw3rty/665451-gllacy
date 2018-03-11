@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link type="text/css" rel="stylesheet" href="style/style.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
     <header class="main-header container">
 
-      <img src="http://placehold.it/150x100" alt="Gllacy Shop" class="logo" width="154" height="64">
+      <img src="img/logo.svg" alt="Gllacy Shop" class="logo" width="154" height="64">
 
       <nav class="main-nav">
           <ul class="site-nav">
@@ -26,19 +26,19 @@
               <li><a href="about.html">О Компания</a></li>
           </ul>
           <div class="search">
-            <form>
+            <form method="get">
               <input type="search" name="search" value="Что ищем?" class="dropdown">
             </form>
           </div>
             <ul>
-              <li class="login dropdown-login"><a href="#">Вход</a></li>
-              <li class="basket dropdown-basket"><a href="#">2 Товара</a>
-                <section class="dropdown open-basket">
+              <li class="login"><a href="#">Вход</a></li>
+              <li class="basket dropdown"><a href="#">2 Товара</a>
+                <section class="open-basket">
                     <span class="Cancellations">x</span>
                     <table>
                       <tr>
-                        <td><img src="http://placehold.it/150x100" alt="Пломбир с апельсиновым джемом" class="logo" width="154" height="64"></td>
-                        <td>Пломбир с апельсиновым джемом</td>
+                        <td><a href="#"><img src="img/icprev1.jpg" alt="Пломбир с апельсиновым джемом" class="logo" width="33" height="33"></a></td>
+                        <td><a href="#">Пломбир с апельсиновым джемом</a></td>
                         <td>1,5 кг х <span>200 руб</span></td>
                         <td>300 руб.</td>
                     </tr>
@@ -46,8 +46,8 @@
                   <span class="Cancellations">x</span>
                   <table>
                     <tr>
-                      <td><img src="http://placehold.it/150x100" alt="Клубничный пломбир с присыпкой из белого шоколада" class="logo" width="154" height="64"></td>
-                      <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                      <td><a href="#"><img src="img/icprev2.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада" class="logo" width="33" height="33"></a></td>
+                      <td><a href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
                       <td>1,5 кг х <span>300 руб</span></td>
                       <td>450 руб.</td>
                     </tr>
@@ -60,14 +60,13 @@
             </ul>
       </nav>
 
-      <nav class="breadcrumps">
-        <!-- Можно ли делать второй нав в хэдере? Обьединить с 1-м навом или убрать нав и оставить просто список? и вооьще он тут долже быть или в мэйне? -->
+      <section class="breadcrumps">
         <ul>
           <li><a class="index.html">Главная</a></li>
           <li><a class="caalog.html">Каталог</a></li>
           <li class="current-page">Сливочное</li>
         </ul>
-      </nav>
+      </section>
 
        <p class="worktime">
         С 10 до 20, ежедневно<br>
@@ -82,12 +81,13 @@
 
       <section class="filter">
         <h2 class="hidden">Фильтр товаров</h2>
-        <form method="post">
+        <form method="get">
           <ul>
-            <li>Сортировка:
+            <li><label for="#sort"> Сортировка:</label>
               <ul>
                  <li class="filter-sort">
-                    <select class="sort">
+                  <h3 class="hidden">Фильтровать по характеристикам</h3>
+                    <select class="sort" id="sort">
                       <option value="popular">по популярности</option>
                       <option value="cheap">сначала недорогие</option>
                       <option value="expensive">сначала дорогие</option>
@@ -97,10 +97,11 @@
               </ul>
             </li>
             <li class="filter-price">
-              Цена: 100руб-500руб.
-              <ul>
-                <li><span>scroller</span></li>
-              </ul>
+              <h3 class="hidden">Диапазон цен</h3>
+              <label>
+                Цена: 100руб-500руб.
+                <input type="range" min="100" max="1000" step="10" name="price-scroller">
+              </label>
             </li>
             <li class="filter-greasy">
               Жирность:
@@ -177,11 +178,12 @@
         <h2 class="hidden">Каталог товаров</h2>
         <ul class="catalog-list">
           <li>
+            <!-- Как лучше сделать обёртку? 1 дивом которому задавать фон при наведении или двумя дивами - 1 обертка фон, 2 карточка и кнопка? -->
             <div class="item-wrapper">
               <div class="catalog-item">
                 <a href="#">
-                  <img src="http://placehold.it/150x100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" class="logo" width="154" height="64">
-                  <b>310<span class="rouble"></span>/кг</b>
+                  <img src="img/icprev1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" class="catalog-item-pic" width="267" height="267">
+                  <b>310<img src="img/rouble.svg" alt="Иконка рубля">/кг</b>
                   <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
                 </a>
               </div>
@@ -192,8 +194,8 @@
             <div class="item-wrapper hover">
               <div class="catalog-item">
                 <a href="#">
-                  <img src="http://placehold.it/150x100" alt="Сливочно-кофейное с кусочками шоколада" class="logo" width="154" height="64">
-                  <b>380<span class="rouble"></span>/кг</b>
+                  <img src="img/icprev2.jpg" alt="Сливочно-кофейное с кусочками шоколада" class="catalog-item-pic" width="267" height="267">
+                  <b>380<img src="img/rouble.svg" alt="Иконка рубля">/кг</b>
                   <p>Сливочно-кофейное с кусочками шоколада</p>
                 </a>
               </div>
@@ -204,8 +206,8 @@
             <div class="item-wrapper">
               <div class="catalog-item">
                 <a href="#">
-                  <img src="http://placehold.it/150x100" alt="Сливочно-клубничное с присыпкой из белого шоколада" class="logo" width="154" height="64">
-                  <b>355<span class="rouble"></span>/кг</b>
+                  <img src="img/icprev3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" class="catalog-item-pic" width="267" height="267">
+                  <b>355<img src="img/rouble.svg" alt="Иконка рубля">/кг</b>
                   <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
                 </a>
               </div>
@@ -216,20 +218,21 @@
             <div class="item-wrapper">
               <div class="catalog-item">
                 <a href="#">
-                  <img src="http://placehold.it/150x100" alt="Сливочное крем-брюле с карамельной подливкой" class="logo" width="154" height="64">
-                  <b>415<span class="rouble"></span>/кг</b>
+                  <img  src="img/icprev4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" class="catalog-item-pic" width="267" height="267">
+                  <b>415<img src="img/rouble.svg" alt="Иконка рубля">/кг</b>
                   <p>Сливочное крем-брюле с карамельной подливкой</p>
                 </a>
               </div>
               <a href="#" class="btn fast-view-btn">Быстрый просмотр</a>
             </div>
           </li>
-           <li>
+
+          <li>
             <div class="item-wrapper">
               <div class="catalog-item">
                 <a href="#">
-                  <img src="http://placehold.it/150x100" alt="Сливочное с брусничным джемом" class="logo" width="154" height="64">
-                  <b>325<span class="rouble"></span>/кг</b>
+                  <img src="img/icprev2-1.jpg"" alt="Сливочное с брусничным джемом" class="catalog-item-pic" width="267" height="267">
+                  <b>325<img src="img/rouble.svg" alt="Иконка рубля">/кг</b>
                   <p>Сливочное с брусничным джемом</p>
                 </a>
               </div>
@@ -240,9 +243,9 @@
             <div class="item-wrapper">
               <div class="catalog-item">
                 <a href="#">
-                  <img src="http://placehold.it/150x100" alt="Сливочно-черничное с цельными ягодами черники" class="logo" width="154" height="64">
-                  <b>410<span class="rouble"></span>/кг</b>
-                  <p>Сливочно-черничное с цельными ягодами черники </p>
+                  <img src="img/icprev2-2.jpg" alt="Сливочно-черничное с цельными ягодами черники" class="catalog-item-pic" width="267" height="267">
+                  <b>410<img src="img/rouble.svg" alt="Иконка рубля">/кг</b>
+                  <p>Сливочно-черничное с цельными ягодами черники</p>
                 </a>
               </div>
               <a href="#" class="btn fast-view-btn">Быстрый просмотр</a>
@@ -252,8 +255,8 @@
             <div class="item-wrapper">
               <div class="catalog-item">
                 <a href="#">
-                  <img src="http://placehold.it/150x100" alt="Сливочно-лимонное с карамельной присыпкой" class="logo" width="154" height="64">
-                  <b>375<span class="rouble"></span>/кг</b>
+                  <img src="img/icprev2-3.jpg" alt="Сливочно-лимонное с карамельной присыпкой" class="catalog-item-pic" width="267" height="267">
+                  <b>375<img src="img/rouble.svg" alt="Иконка рубля">/кг</b>
                   <p>Сливочно-лимонное с карамельной присыпкой</p>
                 </a>
               </div>
@@ -264,20 +267,21 @@
             <div class="item-wrapper">
               <div class="catalog-item">
                 <a href="#">
-                  <img src="http://placehold.it/150x100" alt="Сливочное с шоколадной стружкой" class="logo" width="154" height="64">
-                  <b>320<span class="rouble"></span>/кг</b>
+                  <img src="img/icprev2-4.jpg" alt="Сливочное с шоколадной стружкой" class="catalog-item-pic" width="267" height="267">
+                  <b>320<img src="img/rouble.svg" alt="Иконка рубля">/кг</b>
                   <p>Сливочное с шоколадной стружкой</p>
                 </a>
               </div>
               <a href="#" class="btn fast-view-btn">Быстрый просмотр</a>
             </div>
           </li>
+
           <li>
             <div class="item-wrapper">
               <div class="catalog-item">
                 <a href="#">
-                  <img src="http://placehold.it/150x100" alt="Сливочно-ванильное с кусочками шоколада" class="logo" width="154" height="64">
-                  <b>440<span class="rouble"></span>/кг</b>
+                  <img src="img/icprev3-1.jpg" alt="Сливочно-ванильное с кусочками шоколада" class="catalog-item-pic" width="267" height="267">
+                  <b>440<img src="img/rouble.svg" alt="Иконка рубля">/кг</b>
                   <p>Сливочно-ванильное с кусочками шоколада</p>
                 </a>
               </div>
@@ -288,8 +292,8 @@
             <div class="item-wrapper">
               <div class="catalog-item">
                 <a href="#">
-                  <img src="http://placehold.it/150x100" alt="Сливочноe с ментоловым сиропом" class="logo" width="154" height="64">
-                  <b>435<span class="rouble"></span>/кг</b>
+                  <img src="img/icprev3-2.jpg" alt="Сливочноe с ментоловым сиропом" class="catalog-item-pic" width="267" height="267">
+                  <b>435<img src="img/rouble.svg" alt="Иконка рубля">/кг</b>
                   <p>Сливочноe с ментоловым сиропом</p>
                 </a>
               </div>
@@ -300,8 +304,8 @@
             <div class="item-wrapper">
               <div class="catalog-item">
                 <a href="#">
-                  <img src="http://placehold.it/150x100" alt="Сливочное с кусочками черного шоколада" class="logo" width="154" height="64">
-                  <b>355<span class="rouble"></span>/кг</b>
+                  <img src="img/icprev3-3.jpg" alt="Сливочное с кусочками черного шоколада" class="catalog-item-pic" width="267" height="267">
+                  <b>355<img src="img/rouble.svg" alt="Иконка рубля">/кг</b>
                   <p>Сливочное с кусочками черного шоколада</p>
                 </a>
               </div>
@@ -312,8 +316,8 @@
             <div class="item-wrapper">
               <div class="catalog-item">
                 <a href="#">
-                  <img src="http://placehold.it/150x100" alt="Сливочное с мятным сиропом" class="logo" width="154" height="64">
-                  <b>420<span class="rouble"></span>/кг</b>
+                  <img src="img/icprev3-4.jpg" alt="Сливочное с мятным сиропом" class="catalog-item-pic" width="267" height="267">
+                  <b>420<img src="img/rouble.svg" alt="Иконка рубля">/кг</b>
                   <p>Сливочное с мятным сиропом</p>
                 </a>
               </div>
@@ -321,6 +325,7 @@
             </div>
           </li>
         </ul>
+
         <ul class="pagination-list">
           <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
           <li class="pagination-item"><a href="#">2</a></li>
@@ -333,17 +338,19 @@
     </main>
 
     <footer class="main-footer container">
+      <h2 class="hidden">Мы в соцсетях</h2>
       <section class="social">
         <ul>
-          <li class="social-btn btn-tw"><a href="twitter.com"></a></li>
-          <li class="social-btn btn-inst"><a href="instagram.com"></a></li>
-          <li class="social-btn btn-fb"><a href="facebook.com"></a></li>
-          <li class="social-btn btn-vk"><a href="vk.com"></a></li>
+          <li class="social-btn btn-tw"><a href="twitter.com"><img src="img/twitter.svg" alt="Твиттер"></a></li>
+          <li class="social-btn btn-inst"><a href="instagram.com"><img src="img/instagram.svg" alt="Инстаграм"></a></li>
+          <li class="social-btn btn-fb"><a href="facebook.com"><img src="img/facebook.svg" alt="Фэйсбук"></a></li>
+          <li class="social-btn btn-vk"><a href="vk.com"><img src="img/vk.svg" alt="Вконтакте"></a></li>
         </ul>
       </section>
 
       <div class="about-us">
-        <span></span>
+        <h2 class="hidden">О компании</h2>
+        <img src="img/heart.svg" class="heart-pict" alt="Иконка">
         <a href="contacts.html">Для поставщиков</a>
         <a href="#">Наши документы</a>
         <a href="#">О производстве</a>
@@ -351,8 +358,9 @@
       </div>
 
       <div class="copyright">
+        <h2 class="hidden">Сайт разработан</h2>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img  src="http://placehold.it/150x100" alt="htmlacademy.ru" width="150" height="100">
+          <img src="img/logo-htmlacademy-small.svg" width="120" height="39" alt="htmlacademy">
         </a>
         <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
        </div>

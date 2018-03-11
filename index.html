@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link type="text/css" rel="stylesheet" href="style/style.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
     <header class="main-header container">
-      <img src="http://placehold.it/150x100" alt="Gllacy Shop" class="logo" width="154" height="64">
+      <img src="img/logo.svg" alt="Gllacy Shop" class="logo" width="154" height="64">
       <nav class="main-nav">
           <ul class="site-nav">
               <li class="dropdown-cat"> <a href="catalog.html">Каталог</a>
@@ -23,14 +23,14 @@
               <li><a href="delivery.html">Доставка и оплата</a></li>
               <li><a href="about.html">О Компания</a></li>
           </ul>
-          <div class="search dropdown-search">
+          <div class="search">
             <form>
               <input type="search" name="search" value="Что ищем?" class="dropdown">
             </form>
           </div>
           <ul>
-            <li class="login dropdown-log"> Вход</li>
-            <li class="basket">Пусто</li>
+            <li  class="login"><a  href="login.html">Вход</a></li>
+            <li class="basket"><a href="basket.html">Пусто</a></li>
           </ul>
       </nav>
       <p class="worktime">
@@ -44,21 +44,49 @@
       <h1 class="hidden">Мороженое Glaccy Shop</h1>
 
       <section class="slider">
-        <img src="http://placehold.it/150x100" alt="Крем-брюле и пломбир с малиновым джемом" width="150" height="100">
-        <p class="slider-hook">
-          Крем-брюле и пломбир<br>
-          с малиновым джемом
-        </p>
-        <a href="catalog.html" class="btn order-btn">Дайте оба!</a>
-        <form>
-          <input type="radio" name="slider-radio" value="slider1" checked>
-          <input type="radio" name="slider-radio" value="slider2">
-          <input type="radio" name="slider-radio" value="slider3">
-        </form>
+        <section class="slider-1">
+          <img src="img/slider-icecream1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="1045" height="881">
+          <h2 class="slider-hook">
+            Крем-брюле и пломбир<br>
+            с малиновым джемом
+          </h2>
+          <a href="catalog.html" class="btn order-btn">Дайте оба!</a>
+          <form>
+            <input type="radio" name="slider-radio" value="slider1" checked>
+            <input type="radio" name="slider-radio" value="slider2">
+            <input type="radio" name="slider-radio" value="slider3">
+          </form>
+        </section>
+        <section class="slider-2">
+          <img src="img/slider-icecream2.png" alt="Шоколадный пломбир и лимонный сорбет" width="1045" height="881">
+          <h2 class="slider-hook">
+            Шоколадный пломбир<br>
+            и лимонный сорбет
+          </h2>
+          <a href="catalog.html" class="btn order-btn">Дайте оба!</a>
+          <form class="get">
+            <input type="radio" name="slider-radio" value="slider1">
+            <input type="radio" name="slider-radio" value="slider2" checked>
+            <input type="radio" name="slider-radio" value="slider3">
+          </form>
+        </section>
+        <section class="slider-3">
+          <img src="img/slider-icecream3.png" alt="Пломбир с помадкой и клубничный щербет" width="1045" height="881">
+          <h2 class="slider-hook">
+            Пломбир с помадкой<br>
+            и клубничный щербет
+          </h2>
+          <a href="catalog.html" class="btn order-btn">Дайте оба!</a>
+          <form method="get">
+            <input type="radio" name="slider-radio" value="slider1">
+            <input type="radio" name="slider-radio" value="slider2" checked>
+            <input type="radio" name="slider-radio" value="slider3">
+          </form>
+        </section>
       </section>
 
       <article class="get-free">
-        <h2 class="hidden">Добавки Даром</h2>
+        <h1 class="hidden">Промоакции</h1>
         <div class="get-free-item">
           <h2>Малинка даром!</h2>
           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -72,59 +100,69 @@
       </article>
 
       <section class="hits">
-        <h2 class="hidden">Хиты продаж</h2>
+        <h1 class="hidden">Хиты продаж</h1>
+                                            <!-- Как лучше сделать обёртку? 1 дивом которому задавать фон при наведении или двумя дивами - 1 обертка фон, 2 карточка и кнопка? -->
         <div class="hit-item">
           <a href="catalog.html">
-            <img src="http://placehold.it/150x100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="150" height="100">
+            <img src="img/icprev1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
+            <b>310<img src="img/rouble.svg" alt="Иконка рубля">/кг</b>
+            <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
           </a>
-          <b>310<span class="rouble"></span>/кг</b>
-          <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+          <a href="#" class="btn btn-fastview">Быстрый просмотр</a>
         </div>
+
         <div class="hit-item">
           <a href="catalog.html">
-            <img src="http://placehold.it/150x100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="150" height="100">
+            <img src="img/icprev2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
+            <b>380<img src="img/rouble.svg" alt="Иконка рубля">/кг</b>
+            <p>Сливочно-кофейное с кусочками шоколада</p>
           </a>
-          <b>380<span class="rouble"></span>/кг</b>
-          <p>Сливочно-кофейное с кусочками шоколада</p>
+          <a href="#" class="btn btn-fastview">Быстрый просмотр</a>
         </div>
+
         <div class="hit-item">
           <a href="catalog.html">
-            <img src="http://placehold.it/150x100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="150" height="100">
+            <img src="img/icprev3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
+            <b>355<img src="img/rouble.svg" alt="Иконка рубля">/кг</b>
+            <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
           </a>
-          <b>355<span class="rouble"></span>/кг</b>
-          <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+          <a href="#" class="btn btn-fastview">Быстрый просмотр</a>
         </div>
+
         <div class="hit-item">
           <a href="catalog.html">
-            <img src="http://placehold.it/150x100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="150" height="100">
+            <img src="img/icprev4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
+            <b>415<img src="img/rouble.svg" alt="Иконка рубля">/кг</b>
+            <p>Сливочное крем-брюле с карамельной подливкой</p>
           </a>
-          <b>415<span class="rouble"></span>/кг</b>
-          <p>Сливочное крем-брюле с карамельной подливкой</p>
+          <a href="#" class="btn btn-fastview">Быстрый просмотр</a>
         </div>
+
       </section>
 
       <section class="features">
-        <h2 class="hidden">Преимущества</h2>
+        <h1 class="hidden">Наши преимущества</h1>
         <div class="features-item">
-          <span></span>
+          <img src="img/icecream-pict.svg" class="icecream-pict" alt="Иконка">
           <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
         </div>
         <div class="features-item">
-          <span></span>
+          <img src="img/cow-pict.svg" class="cow-pict" alt="Иконка">
           <p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
           </p>
         </div>
         <div class="features-item">
-          <span></span>
+          <img src="img/leaf-pict.svg" class="leaf-pict" alt="Иконка">
           <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
         </div>
-        <div class="featurest-item">
-          <span></span>
+        <div class="features-item">
+          <img src="img/therm-pict.svg" class="therm-pict" alt="Иконка">
           <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
         </div>
       </section>
 
       <article class="blog-item">
+        <h2 class="hidden">Блог</h2>
         <a class="blog.html">
           <img src="http://placehold.it/150x100" alt="Клубничный фон" width="150">
           <p>Новое в нашем блоге</p>
@@ -133,6 +171,7 @@
       </article>
 
       <section class="subscribe">
+        <h2 class="hidden">E-mail расслыка</h2>
         <img src="http://placehold.it/150x100" alt="фон" width="150">
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <form method="post">
@@ -142,8 +181,8 @@
       </section>
 
       <section class="map">
-        <h2 class="hidden">Как проехать</h2>
-        <img src="http://placehold.it/150x100" alt="фон" width="150">
+        <h1 class="hidden">Как проехать</h1>
+        <img src="img/map.jpg" alt="карта проезда" width="1200" height="430">
         <span class="ice-cream-pict"></span>
         <section class="contacts">
           <p>Адрес главного офиса<br> и офлайн-магазина:<br>
@@ -160,17 +199,19 @@
     </main>
 
     <footer class="main-footer container">
+      <h2 class="hidden">Мы в соцсетях</h2>
       <section class="social">
         <ul>
-          <li class="social-btn btn-tw"><a href="twitter.com"></a></li>
-          <li class="social-btn btn-inst"><a href="instagram.com"></a></li>
-          <li class="social-btn btn-fb"><a href="facebook.com"></a></li>
-          <li class="social-btn btn-vk"><a href="vk.com"></a></li>
+          <li class="social-btn btn-tw"><a href="twitter.com"><img src="img/twitter.svg" alt="Твиттер"></a></li>
+          <li class="social-btn btn-inst"><a href="instagram.com"><img src="img/instagram.svg" alt="Инстаграм"></a></li>
+          <li class="social-btn btn-fb"><a href="facebook.com"><img src="img/facebook.svg" alt="Фэйсбук"></a></li>
+          <li class="social-btn btn-vk"><a href="vk.com"><img src="img/vk.svg" alt="Вконтакте"></a></li>
         </ul>
       </section>
 
       <div class="about-us">
-        <span></span>
+        <h2 class="hidden">О компании</h2>
+        <img src="img/heart.svg" class="heart-pict" alt="Иконка">
         <a href="contacts.html">Для поставщиков</a>
         <a href="#">Наши документы</a>
         <a href="#">О производстве</a>
@@ -178,22 +219,41 @@
       </div>
 
       <div class="copyright">
+        <h2 class="hidden">Сайт разработан</h2>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img  src="http://placehold.it/150x100" alt="htmlacademy.ru" width="150" height="100">
+          <img src="img/logo-htmlacademy-small.svg" width="120" height="39" alt="htmlacademy">
         </a>
         <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
        </div>
     </footer>
 
-    <div class="login-form dropdown">
+    <section class="login-form dropdown">
+      <h2 class="hidden">Форма входа</h2>
        <form method="post">
+          <label class="hidden"> Логин
            <input type="text" name="login">
+          </label>
+          <label  class="hidden"> Пароль
            <input type="password" name="password">
+          </label>
+          <label class="hidden"> Войти
            <input type="submit" name="login" value="Войти">
+          </label>
         </form>
           <a href="#">Забыли пароль?</a>
           <a href="#">Новая регистрация</a>
-    </div>
+    </section>
+
+    <section class="feedback-form">
+      <h1 class="hidden">Форма обратной связи</h1>
+      <b>Мы обязательно вам ответим</b>
+      <form method="post" name="feedback-form">
+        <input type="text" name="name" value="Как вас зовут">
+        <input type="email" name="email" value="Ваша почта для ответа?">
+        <textarea name="comment" rows="10" cols="100">Напишите что-нибудь...</textarea>
+        <input type="submit" name="button" value="Отправить">
+      </form>
+    </section>
 
   </body>
 </html>
