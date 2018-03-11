@@ -9,7 +9,7 @@
 
     <header class="main-header container">
 
-      <img src="img/logo.svg" alt="Gllacy Shop" class="logo" width="154" height="64">
+      <a href="index.html"><img src="img/logo.svg" alt="Gllacy Shop" class="logo" width="154" height="64"></a>
 
       <nav class="main-nav">
           <ul class="site-nav">
@@ -26,13 +26,13 @@
               <li><a href="about.html">О Компания</a></li>
           </ul>
           <div class="search">
-            <form method="get">
+            <form method="get" action="https://echo.htmlacademy.ru">
               <input type="search" name="search" value="Что ищем?" class="dropdown">
             </form>
           </div>
             <ul>
               <li class="login"><a href="#">Вход</a></li>
-              <li class="basket dropdown"><a href="#">2 Товара</a>
+              <li class="basket dropdown"><a href="#"><img src="img/basket.svg" alt="Иконка Корзины">2 Товара</a>
                 <section class="open-basket">
                     <span class="Cancellations">x</span>
                     <table>
@@ -78,99 +78,73 @@
       <h1 class="hidden">Мороженое Glaccy Shop</h1>
       <h2>Сливочное мороженое</h2>
 
+<section class="filter">
 
-      <section class="filter">
-        <h2 class="hidden">Фильтр товаров</h2>
-        <form method="get">
-          <ul>
-            <li><label for="sort"> Сортировка:</label>
-              <ul>
-                 <li class="filter-sort">
-                  <h3 class="hidden">Фильтровать по характеристикам</h3>
-                    <select class="sort" id="sort">
-                      <option value="popular">по популярности</option>
-                      <option value="cheap">сначала недорогие</option>
-                      <option value="expensive">сначала дорогие</option>
-                      <option value="greasy">по жирности</option>
-                    </select>
-                  </li>
-              </ul>
-            </li>
-            <li class="filter-price">
-              <h3 class="hidden">Диапазон цен</h3>
-              <label>
-                Цена: 100руб-500руб.
-                <input type="range" min="100" max="1000" step="10" name="price-scroller">
+
+        <form method="get" action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend>
+              <h3 class="hidden">Фильтровать по характеристикам</h3>
+              <label> Сортировка:
+                  <select class="sort">
+                    <option value="popular">по популярности</option>
+                    <option value="cheap">сначала недорогие</option>
+                    <option value="expensive">сначала дорогие</option>
+                    <option value="greasy">по жирности</option>
+                  </select>
               </label>
-            </li>
-            <li class="filter-greasy">
-              Жирность:
-                <ul>
-                  <li >
-                    <label>
-                      <input type="radio" name="fat" value="0%">
-                      0%
-                    </label>
-                  </li>
-                   <li >
-                    <label>
-                      <input type="radio" name="fat"  value="<10%" checked>
-                      До 10%
-                    </label>
-                  </li>
-                   <li >
-                    <label>
-                      <input type="radio" name="fat" value="<20%">
-                      До 20%
-                    </label>
-                  </li>
-                   <li >
-                    <label>
-                      <input type="radio" name="fat" value=">30%">
-                      До 30%
-                    </label>
-                  </li>
-                </ul>
-            </li>
-            <li class="filter-filler">
-              Наполнители:
-              <ul>
-                <li>
+
+              <label class="filter-price">
+                  <span class="hidden">Сортировка по цене</span>
+                  Цена: 100руб-500руб.
+                  <input type="range" min="100" max="1000" step="10" name="price-scroller">
+              </label>
+
+              <span class="filter-greasy">Жирность:
+                  <label>
+                    <input type="radio" name="fat" value="0%">
+                    0%
+                  </label>
+                  <label>
+                   <input type="radio" name="fat"  value="<10%" checked>
+                    До 10%
+                  </label>
+                  <label>
+                    <input type="radio" name="fat" value="<20%">
+                    До 20%
+                  </label>
+                  <label>
+                    <input type="radio" name="fat" value=">30%">
+                    До 30%
+                  </label>
+              </span>
+
+              <span class="filter-filler">Наполнители:
                   <label>
                     <input type="radio" name="add-chokolate" value="chocolate" checked="">
                     шоколадные
                   </label>
-                </li>
-                <li>
                   <label>
-                     <input type="radio" name="add-sugar" value="sugar" checked="">
-                     Сахарные присыпки
+                    <input type="radio" name="add-sugar" value="sugar" checked="">
+                    Сахарные присыпки
                   </label>
-                </li>
-                <li>
                   <label>
-                     <input type="radio" name="add-fruits" value="fruits">
-                     Фрукты
+                    <input type="radio" name="add-fruits" value="fruits">
+                    Фрукты
                   </label>
-                </li>
-                <li>
                   <label>
-                     <input type="radio" name="add-syrup" value="syrup">
-                     Сироп
+                    <input type="radio" name="add-syrup" value="syrup">
+                    Сироп
                   </label>
-                </li>
-                <li>
                   <label>
-                     <input type="radio" name="add-jam" value="jam">
-                     Джем
+                    <input type="radio" name="add-jam" value="jam">
+                    Джем
                   </label>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <input type="submit" name="use-filter" value="Применить" class="filter-btn">
-            </li>
-          </ul>
+              </span>
+
+              <input type="submit" value="Применить" class="filter-btn btn">
+            </legend>
+          </fieldset>
         </form>
       </section>
 
@@ -178,7 +152,7 @@
         <h2 class="hidden">Каталог товаров</h2>
         <ul class="catalog-list">
           <li>
-            <!-- Как лучше сделать обёртку? 1 дивом которому задавать фон при наведении или двумя дивами - 1 обертка фон, 2 карточка и кнопка? -->
+            <!-- Как лучше сделать обёртку? 1 дивом которому задавать фон при наведении или двумя дивами - 1 обертка фон  и кнопка, 2 карточка товара? -->
             <div class="item-wrapper">
               <div class="catalog-item">
                 <a href="#">
@@ -368,10 +342,10 @@
 
 
     <section class="login-form dropdown">
-       <form method="post">
+       <form method="post" action="https://echo.htmlacademy.ru">
            <input type="text" name="login">
            <input type="password" name="password">
-           <input type="submit" name="login" value="Войти"><!-- Кнопку "ВОЙТИ" Надо делать ссылкой?-->
+           <input type="submit" value="Войти"><!-- Кнопку "ВОЙТИ" Надо делать ссылкой?-->
         </form>
           <a href="#">Забыли пароль?</a>
           <a href="#">Новая регистрация</a>

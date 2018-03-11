@@ -8,7 +8,7 @@
   <body>
 
     <header class="main-header container">
-      <img src="img/logo.svg" alt="Gllacy Shop" class="logo" width="154" height="64">
+      <a href="index.html"><img src="img/logo.svg" alt="Gllacy Shop" class="logo" width="154" height="64"></a>
       <nav class="main-nav">
           <ul class="site-nav">
               <li class="dropdown-cat"> <a href="catalog.html">Каталог</a>
@@ -24,7 +24,7 @@
               <li><a href="about.html">О Компания</a></li>
           </ul>
           <div class="search">
-            <form>
+            <form method="get" action="https://echo.htmlacademy.ru">
               <input type="search" name="search" value="Что ищем?" class="dropdown">
             </form>
           </div>
@@ -41,9 +41,13 @@
 
     <main class="container">
 
-      <h1 class="hidden">Мороженое Glaccy Shop</h1>
+     <section class="slider">
+        <h1 class="hidden">Мороженое Glaccy Shop</h1>
 
-      <section class="slider">
+        <input type="radio" name="slider-radio" value="slider1" checked>
+        <input type="radio" name="slider-radio" value="slider2">
+        <input type="radio" name="slider-radio" value="slider3">
+
         <section class="slider-1">
           <img src="img/slider-icecream1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="1045" height="881">
           <h2 class="slider-hook">
@@ -51,11 +55,6 @@
             с малиновым джемом
           </h2>
           <a href="catalog.html" class="btn order-btn">Дайте оба!</a>
-          <form>
-            <input type="radio" name="slider-radio" value="slider1" checked>
-            <input type="radio" name="slider-radio" value="slider2">
-            <input type="radio" name="slider-radio" value="slider3">
-          </form>
         </section>
         <section class="slider-2">
           <img src="img/slider-icecream2.png" alt="Шоколадный пломбир и лимонный сорбет" width="1045" height="881">
@@ -64,11 +63,6 @@
             и лимонный сорбет
           </h2>
           <a href="catalog.html" class="btn order-btn">Дайте оба!</a>
-          <form class="get">
-            <input type="radio" name="slider-radio" value="slider1">
-            <input type="radio" name="slider-radio" value="slider2" checked>
-            <input type="radio" name="slider-radio" value="slider3">
-          </form>
         </section>
         <section class="slider-3">
           <img src="img/slider-icecream3.png" alt="Пломбир с помадкой и клубничный щербет" width="1045" height="881">
@@ -77,16 +71,11 @@
             и клубничный щербет
           </h2>
           <a href="catalog.html" class="btn order-btn">Дайте оба!</a>
-          <form method="get">
-            <input type="radio" name="slider-radio" value="slider1">
-            <input type="radio" name="slider-radio" value="slider2" checked>
-            <input type="radio" name="slider-radio" value="slider3">
-          </form>
         </section>
       </section>
 
       <article class="get-free">
-        <h1 class="hidden">Промоакции</h1>
+        <h2 class="hidden">Промоакции</h2>
         <div class="get-free-item">
           <h2>Малинка даром!</h2>
           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -100,7 +89,7 @@
       </article>
 
       <section class="hits">
-        <h1 class="hidden">Хиты продаж</h1>
+        <h2 class="hidden">Хиты продаж</h2>
                                             <!-- Как лучше сделать обёртку? 1 дивом которому задавать фон при наведении или двумя дивами - 1 обертка фон, 2 карточка и кнопка? -->
         <div class="hit-item">
           <a href="catalog.html">
@@ -141,7 +130,7 @@
       </section>
 
       <section class="features">
-        <h1 class="hidden">Наши преимущества</h1>
+        <h2 class="hidden">Наши преимущества</h2>
         <div class="features-item">
           <img src="img/icecream-pict.svg" class="icecream-pict" alt="Иконка">
           <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
@@ -174,33 +163,35 @@
         <h2 class="hidden">E-mail расслыка</h2>
         <img src="http://placehold.it/150x100" alt="фон" width="150">
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <form method="post">
+        <form method="post" action="https://echo.htmlacademy.ru">
           <input type="email" name="email" value="Электронная почта">
-          <input type="submit" name="email" value="Отправить" class="btn subscribe-btn">
+          <input type="submit" value="Отправить" class="btn subscribe-btn">
         </form>
       </section>
 
       <section class="map">
-        <h1 class="hidden">Как проехать</h1>
+        <h2 class="hidden">Как проехать</h2>
         <img src="img/map.jpg" alt="карта проезда" width="1200" height="430">
         <span class="ice-cream-pict"></span>
-        <section class="contacts">
-          <p>Адрес главного офиса<br> и офлайн-магазина:<br>
-            <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
-          </p>
-          <p>
-            Для заказов по телефону:<br>
-            <b>8 812 450-25-25</b><br>
-            (с 10 до 20 ежедневно)
-          </p>
-          <a href="#" class="feedback btn">Форма обратной связи</a>
-        </section>
+        <div class="contacts">
+          <address>
+            <p>Адрес главного офиса<br> и офлайн-магазина:<br>
+              <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+            </p>
+            <p>
+              Для заказов по телефону:<br>
+              <b>8 812 450-25-25</b><br>
+              (с 10 до 20 ежедневно)
+            </p>
+            <a href="#" class="feedback btn">Форма обратной связи</a>
+          </address>
+        </div>
       </section>
     </main>
 
     <footer class="main-footer container">
-      <h2 class="hidden">Мы в соцсетях</h2>
       <section class="social">
+        <h2 class="hidden">Мы в соцсетях</h2>
         <ul>
           <li class="social-btn btn-tw"><a href="twitter.com"><img src="img/twitter.svg" alt="Твиттер"></a></li>
           <li class="social-btn btn-inst"><a href="instagram.com"><img src="img/instagram.svg" alt="Инстаграм"></a></li>
@@ -229,7 +220,7 @@
 
     <section class="login-form dropdown">
       <h2 class="hidden">Форма входа</h2>
-       <form method="post">
+       <form method="post" action="https://echo.htmlacademy.ru"">
           <label class="hidden"> Логин
            <input type="text" name="login">
           </label>
@@ -237,7 +228,7 @@
            <input type="password" name="password">
           </label>
           <label class="hidden"> Войти
-           <input type="submit" name="login" value="Войти">
+           <input type="submit" value="Войти">
           </label>
         </form>
           <a href="#">Забыли пароль?</a>
@@ -245,13 +236,13 @@
     </section>
 
     <section class="feedback-form">
-      <h1 class="hidden">Форма обратной связи</h1>
+      <h2 class="hidden">Форма обратной связи</h2>
       <b>Мы обязательно вам ответим</b>
-      <form method="post" name="feedback-form">
+      <form method="post" action="https://echo.htmlacademy.ru"">
         <input type="text" name="name" value="Как вас зовут">
         <input type="email" name="email" value="Ваша почта для ответа?">
         <textarea name="comment" rows="10" cols="100">Напишите что-нибудь...</textarea>
-        <input type="submit" name="button" value="Отправить">
+        <input type="submit"  value="Отправить">
       </form>
     </section>
 
