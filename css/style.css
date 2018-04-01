@@ -1756,7 +1756,7 @@ footer a:hover {
 .social-btn :active path {
   opacity: 1;
 }
-.
+
 .social-btn:active svg {
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
