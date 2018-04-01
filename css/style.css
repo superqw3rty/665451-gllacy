@@ -1739,10 +1739,11 @@ footer a {
 .social-btn :active path {
   opacity: 1;
 }
-.btn-tw :hover svg
-.social-btn :active svg {
-  border: 22px solid red;
+.
+.social-btn:active svg {
+  border: 2px solid rgba(255, 255, 255, 0.7);
 }
+
 
 /*ABOT-US*/
 .about-us {
