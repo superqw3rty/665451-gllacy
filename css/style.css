@@ -447,6 +447,10 @@ nav ul {
   color: #323232;
   text-decoration: underline;
 }
+.login-form a:hover,
+.login-form a:active {
+  color: #e84d37;
+}
 .login-wrapper:hover .login-form {
   display: block;
 }
@@ -486,6 +490,10 @@ nav ul {
 }
 .open-basket a {
   color: #323232;
+}
+.basket-item a:hover,
+.basket-item a:active {
+  color: #e84d37
 }
 .open-basket span {
   color: #999999;
@@ -728,9 +736,9 @@ main {
 #slider3:checked ~ .slider-3 {
   display: block;
 }
-#slider1:checked ~ label[for="slider1"],
-#slider2:checked ~ label[for="slider2"],
-#slider3:checked ~ label[for="slider3"] {
+#slider1:checked ~ div label[for="slider1"],
+#slider2:checked ~ div label[for="slider2"],
+#slider3:checked ~ div label[for="slider3"] {
   background-color: #ffffff;
 }
 
@@ -1154,9 +1162,11 @@ form .filter-sort {
   padding-top: 1px;
   margin-bottom: 40px;
 }
-.filter .filter-btn:hover {
+#filter-btn:hover,
+input[type="submit"]:hover {
   color: #323232;
   background-color: rgba(255, 255, 255, 1);
+  cursor: pointer;
 }
 
 /*HIT-ITEMS + CATALOG-LIST*/
@@ -1303,14 +1313,19 @@ form .filter-sort {
   left: 33px;
   z-index: 500;
 }
-.btn-fastview:hover {
 
-}
 .catalog-item:hover .fast-view-wrapper,
 .catalog-item:hover .btn-fastview,
 .hit-item:hover .fast-view-wrapper,
 .hit-item:hover .btn-fastview {
   display: block;
+}
+.btn-fastview:hover {
+  background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  box-shadow: 2px 2px 0px rgba(172, 16, 0, 0.004);
+
+}
+
 }
 .catalog-item::before {
   content: "";
@@ -1318,7 +1333,6 @@ form .filter-sort {
   width: 267px;
   height: 15px;
   bottom: -10px;
-
 }
 
 
@@ -1693,6 +1707,9 @@ address :first-child {
 footer a {
   border-bottom: 1px solid #9db1a5;
 }
+footer a:hover {
+  color: #ffbc9e;
+}
 .inner-page .main-footer {
   margin-top: 27px;
 }
@@ -1825,6 +1842,7 @@ footer a {
 
 /*FEEDBACK-FORM*/
 .feedback-form {
+  display: none;
   margin: 10px auto;
   width: 478px;
   height: 443px;
@@ -1926,10 +1944,7 @@ footer a {
 /*ACTIVE*/
 .btn:hover,
 input[type="submit"]:hover {
-   background-image: -webkit-gradient(linear, left top, left bottom, from(#f58669), to(#ec6f5e));
-   background-image: -webkit-linear-gradient(top, #f58669, #ec6f5e);
-   background-image: -o-linear-gradient(top, #f58669, #ec6f5e);
-   background-image: linear-gradient(to bottom, #f58669, #ec6f5e);
+
    cursor: pointer;
 }
 
