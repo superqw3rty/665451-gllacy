@@ -1326,7 +1326,7 @@ input[type="submit"]:hover {
 
 }
 
-}
+
 .catalog-item::before {
   content: "";
   position: absolute;
