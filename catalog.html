@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/min-style.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
   </head>
   <body class="inner-page">
     <div class="light-bg">
@@ -23,8 +23,8 @@
                 <li><a href="catalog.html">Мелорин</a></li>
               </ul>
             </li>
-            <li class="site-nav-li inner-site-nav"><a href="delivery.html">Доставка и оплата</a></li>
-            <li class="site-nav-li inner-site-nav"><a href="about.html">О Компании</a></li>
+            <li class="site-nav-li inner-site-nav"><a href="delivery.html" >Доставка и оплата</a></li>
+            <li class="site-nav-li inner-site-nav"><a href="about.html" >О Компании</a></li>
           </ul>
           <div class="user-nav">
             <div class="search-wrapper">
@@ -149,7 +149,7 @@
           <h3 class="hidden">Фильтровать по характеристикам</h3>
           <form method="get" action="https://echo.htmlacademy.ru">
             <fieldset class="filter-sort">
-              <legend> Сортировка:</legend>
+              <legend>Сортировка:</legend>
               <select class="sort">
                 <option value="popular">по популярности</option>
                 <option value="cheap">сначала недорогие</option>
@@ -157,48 +157,48 @@
                 <option value="greasy">по жирности</option>
               </select>
             </fieldset>
-            <fieldset class="filter-price">
+            <fieldset class="filter-price" >
               <legend class="hidden">Сортировка по цене</legend>
               <span>Цена: 100 руб – 500 руб.</span>
               <div class="filter-price-container">
                 <div class="scale">
                   <div class="active-scale"></div>
-                  <div class="toggle min-toggle"></div>
-                  <div class="toggle max-toggle"></div>
+                  <label class="min-price">
+                    <input name="min-price" type="text" value="100" class="hidden">
+                    <div class="toggle min-toggle"></div>
+                  </label>
+                  <label class="max-price">
+                    <input name="max-price" type="text" value="500" class="hidden">
+                    <div class="toggle max-toggle"></div>
+                  </label>
                 </div>
-                <label class="min-price hidden">
-                <input name="min-price" type="text" value="100">
-                </label>
-                <label class="max-price hidden">
-                <input name="max-price" type="text" value="500">
-                </label>
               </div>
             </fieldset>
             <fieldset class="filter-greasy">
               <legend>Жирность:</legend>
               <div class="greasy-container">
-                <input type="radio" name="fat" value="0%" id="0%" hidden="" class="greasy-input">
+                <input type="radio" name="fat" value="0%" id="0%" class="greasy-input hidden">
                 <label for="0%" class="greasy-label">0%</label>
-                <input type="radio" name="fat"  value="<10%" id="<10%" checked hidden="" class="greasy-input">
+                <input type="radio" name="fat"  value="<10%" id="<10%" checked class="greasy-input hidden">
                 <label for="<10%">до 10%</label>
-                <input type="radio" name="fat" value="<30%" id="<30%" hidden="" class="greasy-input">
+                <input type="radio" name="fat" value="<30%" id="<30%" class="greasy-input hidden">
                 <label for="<30%">до 30%</label>
-                <input type="radio" name="fat" value=">30%" id=">30%" hidden="" class="greasy-input">
+                <input type="radio" name="fat" value=">30%" id=">30%" class="greasy-input hidden">
                 <label for=">30%">выше 30%</label>
               </div>
             </fieldset>
             <fieldset class="filter-filler">
               <legend>Наполнители:</legend>
               <div class="filler-container">
-                <input type="checkbox" name="add-chokolate" value="chocolate" checked="" id="add-chocolate" hidden="" class="filler-input">
+                <input type="checkbox" name="add-chokolate" value="chocolate" checked="" id="add-chocolate" class="filler-input hidden">
                 <label for="add-chocolate">шоколадные</label>
-                <input type="checkbox" name="add-sugar" value="sugar" checked="" id="add-sugar" hidden="" class="filler-input">
+                <input type="checkbox" name="add-sugar" value="sugar" checked="" id="add-sugar" class="filler-input hidden">
                 <label for="add-sugar">сахарные присыпки</label>
-                <input type="checkbox" name="add-fruits" value="fruits" id="add-fruits" hidden="" class="filler-input">
+                <input type="checkbox" name="add-fruits" value="fruits" id="add-fruits" class="filler-input hidden">
                 <label for="add-fruits">фрукты</label>
-                <input type="checkbox" name="add-syrup" value="syrup" id="add-syrup" hidden="" class="filler-input">
+                <input type="checkbox" name="add-syrup" value="syrup" id="add-syrup" class="filler-input hidden">
                 <label for="add-syrup">сиропы</label>
-                <input type="checkbox" name="add-jam" value="jam" id="add-jam" hidden="" class="filler-input">
+                <input type="checkbox" name="add-jam" value="jam" id="add-jam" class="filler-input hidden">
                 <label for="add-jam">джемы</label>
               </div>
             </fieldset>
@@ -448,12 +448,12 @@
           </ul>
         </section>
       </main>
-      <footer class="main-footer container">
+      <footer class="main-footer inner-footer container">
         <section class="social">
           <h2 class="hidden">Мы в соцсетях</h2>
           <ul>
             <li class="social-btn btn-tw">
-              <a href="twitter.com">
+              <a href="twitter.com" >
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="33px"
                   height="33px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                   <g id="Layer_1">
