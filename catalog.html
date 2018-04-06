@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/min-normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/min-style.css">
   </head>
   <body class="inner-page">
     <div class="light-bg">
@@ -157,20 +157,18 @@
                 <option value="greasy">по жирности</option>
               </select>
             </fieldset>
-            <fieldset class="filter-price" >
+            <fieldset class="filter-price">
               <legend class="hidden">Сортировка по цене</legend>
               <span>Цена: 100 руб – 500 руб.</span>
               <div class="filter-price-container">
                 <div class="scale">
                   <div class="active-scale"></div>
-                  <label class="min-price">
-                    <input name="min-price" type="text" value="100" class="hidden">
-                    <div class="toggle min-toggle"></div>
-                  </label>
-                  <label class="max-price">
-                    <input name="max-price" type="text" value="500" class="hidden">
-                    <div class="toggle max-toggle"></div>
-                  </label>
+                  <label for="min-price" class="min-price"><span class="hidden">Минимальная цена</span></label>
+                  <input name="min-price" id="min-price" type="text" value="100" class="hidden">
+                  <div class="toggle min-toggle"></div>
+                  <label  for="max-price" class="max-price"><span class="hidden">Максимальная цена</span></label>
+                  <input name="max-price" id="max-price" type="text" value="500" class="hidden">
+                  <div class="toggle max-toggle"></div>
                 </div>
               </div>
             </fieldset>
@@ -211,7 +209,7 @@
             <li>
               <div class="catalog-item">
                 <img src="img/icprev1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" class="catalog-item-pic" width="267" height="267">
-                <a href="#">
+                <a href="#" class="item-unit">
                   <p class="catalog-price">
                     <span class="bold-price">310</span>
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -230,7 +228,7 @@
             <li>
               <div class="catalog-item">
                 <img src="img/icprev2.jpg" alt="Сливочно-кофейное с кусочками шоколада" class="catalog-item-pic" width="267" height="267">
-                <a href="#">
+                <a href="#" class="item-unit">
                   <p class="catalog-price">
                     <span class="bold-price">380</span>
                     <svg x="0px" y="0px"
@@ -249,7 +247,7 @@
             <li>
               <div class="catalog-item">
                 <img src="img/icprev3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" class="catalog-item-pic" width="267" height="267">
-                <a href="#">
+                <a href="#" class="item-unit">
                   <p class="catalog-price">
                     <span class="bold-price">355</span>
                     <svg x="0px" y="0px"
@@ -268,7 +266,7 @@
             <li>
               <div class="catalog-item">
                 <img  src="img/icprev4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" class="catalog-item-pic" width="267" height="267">
-                <a href="#">
+                <a href="#" class="item-unit">
                   <p class="catalog-price">
                     <span class="bold-price">415</span>
                     <svg x="0px" y="0px"
@@ -287,7 +285,7 @@
             <li>
               <div class="catalog-item">
                 <img src="img/icprev2-1.jpg" alt="Сливочное с&nbsp;брусничным джемом" class="catalog-item-pic" width="267" height="267">
-                <a href="#">
+                <a href="#" class="item-unit">
                   <p class="catalog-price">
                     <span class="bold-price">325</span>
                     <svg x="0px" y="0px"
@@ -306,7 +304,7 @@
             <li>
               <div class="catalog-item">
                 <img src="img/icprev2-2.jpg" alt="Сливочно-черничное с цельными ягодами черники" class="catalog-item-pic" width="267" height="267">
-                <a href="#">
+                <a href="#" class="item-unit">
                   <p class="catalog-price">
                     <span class="bold-price">410</span>
                     <svg x="0px" y="0px"
@@ -325,7 +323,7 @@
             <li>
               <div class="catalog-item">
                 <img src="img/icprev2-3.jpg" alt="Сливочно-лимонное с карамельной присыпкой" class="catalog-item-pic" width="267" height="267">
-                <a href="#">
+                <a href="#" class="item-unit">
                   <p class="catalog-price">
                     <span class="bold-price">375</span>
                     <svg x="0px" y="0px"
@@ -344,7 +342,7 @@
             <li>
               <div class="catalog-item">
                 <img src="img/icprev2-4.jpg" alt="Сливочное с шоколадной стружкой" class="catalog-item-pic" width="267" height="267">
-                <a href="#">
+                <a href="#" class="item-unit">
                   <p class="catalog-price">
                     <span class="bold-price">320</span>
                     <svg x="0px" y="0px"
@@ -363,7 +361,7 @@
             <li>
               <div class="catalog-item">
                 <img src="img/icprev3-1.jpg" alt="Сливочно-ванильное с кусочками шоколада" class="catalog-item-pic" width="267" height="267">
-                <a href="#">
+                <a href="#" class="item-unit">
                   <p class="catalog-price">
                     <span class="bold-price">440</span>
                     <svg x="0px" y="0px"
@@ -382,7 +380,7 @@
             <li>
               <div class="catalog-item">
                 <img src="img/icprev3-2.jpg" alt="Сливочноe с ментоловым сиропом" class="catalog-item-pic" width="267" height="267">
-                <a href="#">
+                <a href="#" class="item-unit">
                   <p class="catalog-price">
                     <span class="bold-price">435</span>
                     <svg x="0px" y="0px"
@@ -401,7 +399,7 @@
             <li>
               <div class="catalog-item">
                 <img src="img/icprev3-3.jpg" alt="Сливочное с кусочками черного шоколада" class="catalog-item-pic" width="267" height="267">
-                <a href="#">
+                <a href="#" class="item-unit">
                   <p class="catalog-price">
                     <span class="bold-price">355</span>
                     <svg x="0px" y="0px"
@@ -420,7 +418,7 @@
             <li>
               <div class="catalog-item">
                 <img src="img/icprev3-4.jpg" alt="Сливочное с мятным сиропом" class="catalog-item-pic" width="267" height="267">
-                <a href="#">
+                <a href="#" class="item-unit">
                   <p class="catalog-price">
                     <span class="bold-price">420</span>
                     <svg x="0px" y="0px"
@@ -439,7 +437,7 @@
           </ul>
           <ul class="pagination-list">
             <li class="pagination-item"><span class="pagination-icon-disabled"></span></li>
-            <li class="pagination-item pagination-item-current"><a href="#" class="pagination-current-link">1</a></li>
+            <li class="pagination-item pagination-item-current"><a href="#" class="pagination-current-link" tabindex="-1">1</a></li>
             <li class="pagination-item pagination-item-nc"><a href="#">2</a></li>
             <li class="pagination-item pagination-item-nc"><a href="#">3</a></li>
             <li class="pagination-item pagination-item-nc"><a href="#">4</a></li>
